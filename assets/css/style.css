@@ -1,0 +1,22 @@
+body div{
+    text-align: center;  margin-top: 100px;
+}
+#mainDiv{
+    margin:auto;
+}
+
+#myInput{
+    width: 315px;
+    height: 50px;
+}
+#inputDiv{
+    text-align: center;
+
+}
+table{
+    margin: auto;
+}
+.btn{
+    width: 80px;
+    height: 50px;
+}
