@@ -203,3 +203,47 @@ evaluatePostfix = function (e) {
 
     return s[0];
 }
+
+let expression = "";
+const inputVar = document.getElementById("myInput");
+addEventListener("click",
+                (e)=>{
+                    // console.log(e.target.id)
+                    switch (e.target.id) {
+                        case "0":
+                        case "1":
+                        case "2":
+                        case "3":
+                        case "4":
+                        case "5":
+                        case "6":
+                        case "7":
+                        case "8":
+                        case "9":
+                        case "+":
+                        case "-":
+                        case "/":
+                        case "*":
+                        case "^":
+                        case "(":
+                        case ")":
+                            expression+=e.target.id
+                            inputVar.value = expression;
+                            // console.log(expression)
+                            break;
+                        case "=":
+                            inputVar.value = evaluatePostfix(infixToPostfix(inputVar.value));
+                            expression = inputVar.value;
+                            break;
+                        case "ac":
+                            expression = expression.substring(0,expression.length-1);
+                            inputVar.value = expression;
+                            break;
+                        case "c":
+                            expression = ""
+                            inputVar.value = expression;
+                            break;
+                        default:
+                            break;
+                    }
+                })
